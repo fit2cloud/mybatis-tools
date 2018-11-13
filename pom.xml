@@ -6,7 +6,7 @@
 
     <groupId>com.fit2cloud</groupId>
     <artifactId>tools</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 
     <dependencies>
         <dependency>
@@ -17,6 +17,12 @@
         </dependency>
     </dependencies>
 
-
+    <distributionManagement>
+        <!-- Publish the versioned releases here -->
+        <repository>
+            <id>fit2cloud-public</id>
+            <url>http://repository.fit2cloud.com/content/repositories/fit2cloud-public</url>
+        </repository>
+    </distributionManagement>
 
 </project>

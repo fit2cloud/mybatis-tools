@@ -15,7 +15,11 @@ public class ApiModelPropertyAnnotationGenerator extends DefaultCommentGenerator
 
     @Override
     public void addFieldComment(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
-        field.addJavaDocLine("@ApiModelProperty(\"" + introspectedColumn.getRemarks() + "\")");
+        if (introspectedColumn.isNullable()) {
+            field.addJavaDocLine("@ApiModelProperty(value = \"" + introspectedColumn.getRemarks() + "\", required = true)");
+        } else {
+            field.addJavaDocLine("@ApiModelProperty(\"" + introspectedColumn.getRemarks() + "\")");
+        }
     }
 
     @Override
