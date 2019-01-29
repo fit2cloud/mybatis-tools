@@ -134,4 +134,8 @@ Then you will get a swagger model.
 Simply mvn package the project and add the plugin in your generatorConfig.xml(maybe some other file you named).
 ```xml
 <plugin type="com.fit2cloud.tools.mybatis.swagger.ImportSwaggerPlugin" />
+
+<commentGenerator type="com.fit2cloud.tools.mybatis.swagger.ApiModelPropertyAnnotationGenerator">
+    <property name="suppressDate" value="true"/>
+</commentGenerator>
 ```
