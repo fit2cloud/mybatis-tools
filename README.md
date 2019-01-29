@@ -102,6 +102,9 @@ CREATE TABLE `user_key` (
 With this generator you can get the model with annotations like this.
 
 ```java
+import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
+
 public class UserKey implements Serializable {
     
     @ApiModelProperty("user_key ID")
